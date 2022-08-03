@@ -1,0 +1,209 @@
+.sec05 {}
+
+.faq {}
+
+.faq__banner {
+}
+
+.faq__inner {
+  padding: 10rem 0 10rem;
+  background: $iceCold2;
+
+  @include u-mqMax {
+    padding: 6rem 1.5rem 6rem;
+  }
+}
+
+.secTtl {}
+
+.secTtl__name {}
+
+.accord02 {
+  margin-top: 5rem;
+}
+
+.accord02__item {
+  background: $white;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+
+    @include u-mqMax {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.accord02__header {
+  padding: 0 3rem;
+  cursor: pointer;
+  position: relative;
+
+  @include u-mqMax {
+    padding: 0 1.5rem;
+  }
+
+  &::before {
+    content: '';
+    left: 50%;
+    bottom: -2px;
+    width: 94.69%;
+    position: absolute;
+    transform: translateX(-50%);
+    border-top: .1rem solid $congressBlue;
+  }
+}
+
+.accord02__headerLabel,
+.accord02__headerLetter {
+  font-weight: 900;
+}
+
+.accord02__headerLabel {
+  padding: 1.5rem 0;
+
+  @include u-mqMax {
+    padding: 1.5rem 0 3.7rem;
+    @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: flex-start);
+  }
+}
+
+.accord02__headerLetter {
+  color: $congressBlue;
+  width: 3.3rem;
+  display: inline-block;
+
+  @include u-mqMax {
+    padding-right: .8rem;
+  }
+}
+
+.accord02__headerArrow {
+  top: 50%;
+  right: 3rem;
+  position: absolute;
+  transform: translateY(-50%) rotate(180deg);
+  width: 2.5rem;
+  height: 1.3rem;
+  background: url('../images/icons/icon-arrow-chevron.png');
+  background-size: 100% 100%;
+  @include u-trs;
+
+  @include u-mqMax {
+    top: auto;
+    right: auto;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .is-open & {
+    transform: translateY(-50%) rotate(0);
+
+    @include u-mqMax {
+      transform: translateX(-50%) rotate(0);
+    }
+  }
+}
+
+.accord02__body {
+  padding: 0 3rem 3rem;
+  margin-top: 1.5rem;
+  position: relative;
+  display: none;
+
+  @include u-mqMax {
+    padding: 0 1.5rem 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.accord02__bodyFlex {
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: flex-start);
+}
+
+.accord02__bodyLetter {
+  width: 3.3rem;
+  font-weight: 900;
+  color: $congressBlue;
+
+  @include u-mqMax {
+    padding-right: .8rem;
+  }
+}
+
+.accord02__bodyInner {
+  flex: 1;
+}
+
+.accord02__bodyAnswer {
+  font-weight: bold;
+  line-height: 1.8;
+  color: $congressBlue;
+}
+
+.accord02__bodyDesc {
+  line-height: 1.8;
+}
+
+.accord02__bodyBtn {
+  width: 30rem;
+
+  .faq & {
+    margin-left: 3.3rem;
+
+    @include u-mqMax {
+      margin: 0 auto;
+    }
+  }
+}
+
+.accord02__bodyBtnItem {
+  display: block;
+  color: $white;
+  position: relative;
+  background: $congressBlue;
+  height: 5rem;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+  box-shadow: .8rem .8rem 1.5rem rgba($color: #000000, $alpha: .2);
+  @include u-trs;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    opacity: .7;
+  }
+
+  &.bg--rose {
+    background: $rose;
+  }
+}
+
+.accord02__bodyBtnItemArrow {
+  width: 2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accord02__bodyList {
+  padding-inline-start: 2rem;
+}
+
+.accord02__bodyCaption {
+  line-height: 1.8;
+
+  @include u-mqMax {
+    .accord02 & {
+      font-size: $text16;
+      text-indent: -1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+}

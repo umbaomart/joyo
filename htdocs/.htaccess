@@ -1,0 +1,5 @@
+AuthUserFile /home/users/0/main.jp-e-yo/web/joyo/.htpasswd
+AuthGroupFile /dev/null
+AuthName "joyo"
+AuthType Basic
+require valid-user

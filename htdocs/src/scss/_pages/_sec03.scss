@@ -1,0 +1,99 @@
+.sec03 {}
+
+.recforcustomers {
+  position: relative;
+  padding: 10rem 0;
+
+  @include u-mqMax {
+    padding: 5.5rem 0 6rem;
+
+    &:before {
+      content: '';
+      top: 0;
+      left: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $tropicalBlue;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 34rem;
+    width: 100%;
+    background: url(../images/radial_bg.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+
+    @include u-mqMax {
+      height: 37.5rem;
+      background: url(../images/radial_bg-sp.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  .secTtl__name {
+    color: $white;
+  }
+}
+
+.sec03__inner {}
+
+.inner__container {}
+
+.cardList03 {
+  width: 100%;
+  max-width: 119.8rem;
+  margin: 5rem auto 0;
+  @include u-flex($fd: row, $fw: wrap, $jc: space-between, $ai: stretch);
+
+  @include u-mqMax {
+    display: block;
+  }
+}
+
+.cardList03__item {
+  width: 28rem;
+
+  @include u-mqMax {
+    width: 34.5rem;
+    margin: 0 auto;
+  }
+
+  &:nth-child(n+5) {
+    margin-top: 3.2rem;
+
+    @include u-mqMax {
+      margin-top: 2rem;
+    }
+  }
+
+  @include u-mqMax {
+    &:nth-child(n+2) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.cardList03__kv {
+  width: 100%;
+}
+
+.cardList03__name {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+
+  @include u-mqMax {
+    margin-top: 1.2rem;
+
+    .cardList03 & {
+      font-size: $text16;
+    }
+  }
+}

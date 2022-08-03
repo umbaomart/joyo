@@ -1,0 +1,22 @@
+/*====================================================================
+siteFooter
+====================================================================*/
+.siteFooter {}
+
+.siteFooter__inner {
+  height: 10rem;
+  background: $congressBlue;
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+}
+
+.toTop {}
+
+.copyrights {
+  color: $white;
+
+  @include u-mqMax {
+    .siteFooter & {
+      font-size: $text12;
+    }
+  }
+}

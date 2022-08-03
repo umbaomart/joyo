@@ -1,0 +1,433 @@
+.sec02 {
+  position: relative;
+  padding: 10.2rem 0 10rem;
+
+  @include u-mqMax {
+    padding: 6rem 1.5rem;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 59.6rem;
+    width: 100%;
+    background: url(../images/educ_bg.png) no-repeat center;
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    z-index: -1;
+
+    @include u-mqMax {
+      height: 34rem;
+      background: url(../images/educ_bg-sp.jpg) no-repeat center;
+      background-size: cover;
+      mix-blend-mode: luminosity;
+      opacity: .3;
+      z-index: -1;
+    }
+  }
+
+  &:before {
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $tropicalBlue;
+    z-index: -2;
+  }
+}
+
+.sec02__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.cardList02 {
+  margin-top: 3rem;
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+  @include u-mqMax {
+    display: block;
+  }
+}
+
+.cardList02__item {
+  width: 34.5rem;
+  overflow: hidden;
+  background: $white;
+  position: relative;
+  border-radius: 1rem;
+  padding: 3.5rem 2.7rem 3rem;
+  box-shadow: 1rem 1rem 2rem rgba($color: #000000, $alpha: .2);
+  @include u-flex($fd: column, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+  @include u-mqMax {
+
+    &:not(:first-child) {
+      margin-top: 3rem;
+    }
+  }
+
+  &:first-child {
+    .cardList02__title {
+      font-size: $text40;
+    }
+  }
+}
+
+.cardList02__header {
+  text-align: center;
+  border-bottom: .2rem solid $havelockBlue;
+}
+
+.cardList02__num {
+  font-size: 7rem;
+  top: -1rem;
+  left: 2.8rem;
+  position: absolute;
+  font-style: italic;
+}
+
+.cardList02__num,
+.cardList02__name {
+  font-weight: bold;
+  color: $havelockBlue;
+}
+
+.cardList02__name {
+  font-weight: 900;
+  padding-bottom: 1.8rem;
+}
+
+.cardList02__itemFlex {
+  flex: 1;
+  @include u-flex($fd: column, $fw: nowrap, $jc: space-between, $ai: stretch);
+}
+
+.cardList02__body {
+  margin-top: 2rem;
+}
+
+.cardList02__title {
+  line-height: 1.4;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: .05em;
+  color: $congressBlue;
+}
+
+.cardList02__titleSm {
+  line-height: 1.8;
+  text-align: center;
+  margin: .7rem auto;
+  letter-spacing: .05em;
+}
+
+.cardList02__desc {
+  margin-top: 1.6rem;
+
+  .text-bold {
+    font-weight: 900;
+  }
+}
+
+.cardList02__text {
+  margin-top: 1.6rem;
+}
+
+.cardList02__textSm {
+  font-size: $text20;
+  letter-spacing: .5em;
+}
+
+.cardList02__kv {
+  width: 100%;
+
+  @include u-mqMax {
+    margin-top: 3rem;
+  }
+}
+
+
+.secTtl__desc {
+  margin-top: 1rem;
+  font-weight: 900;
+
+  @include u-mqMax {
+    margin-top: 1.5rem;
+  }
+}
+
+.box {
+
+  &.boxCommon {
+    width: 100%;
+    overflow: hidden;
+    background: $white;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 2rem rgba($color: #000000, $alpha: .2);
+  }
+
+  &.boxConversation {
+    padding: 5rem;
+    margin-top: 3rem;
+
+    @include u-mqMax {
+      padding: 3.7rem 2rem 3rem;
+    }
+  }
+}
+
+.conversation__item {
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: flex-start);
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    .conversation__prof {
+      margin-left: 3rem;
+
+      @include u-mqMax {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
+}
+
+.conversation__prof {
+  width: 10rem;
+  margin-right: 3rem;
+
+  @include u-mqMax {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 2rem;
+  }
+}
+
+.conversation__message {
+  width: 65rem;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 1rem;
+
+  @include u-mqMax {
+    flex: 1;
+  }
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    top: 2.8rem;
+    position: absolute;
+    border-top: .8rem solid transparent;
+    border-bottom: .8rem solid transparent;
+
+    @include u-mqMax {
+      border-top: .75rem solid transparent;
+      border-bottom: .75rem solid transparent;
+    }
+
+    .bg-serenade & {
+      left: -1.5rem;
+      border-right: 1.5rem solid $serenade;
+    }
+
+    .bg-charlotte & {
+      right: -1.5rem;
+      border-left: 1.5rem solid $charlotte;
+    }
+
+    .bg-paleRose & {
+      left: -1.5rem;
+      border-right: 1.5rem solid $paleRose;
+    }
+
+    .bg-iceCold & {
+      right: -1.5rem;
+      border-left: 1.5rem solid $iceCold;
+    }
+  }
+
+  .bg-serenade & {
+    background: $serenade;
+  }
+
+  .bg-charlotte & {
+    background: $charlotte;
+  }
+
+  .bg-paleRose & {
+    background: $paleRose;
+  }
+
+  .bg-iceCold & {
+    background: $iceCold;
+  }
+}
+
+.conversation__name {
+  line-height: 1.7;
+  font-weight: bold;
+  color: $congressBlue;
+}
+
+.conversation__desc {
+  line-height: 1.75;
+
+  @include u-mqMax {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+.box {
+
+  &.besides {
+    overflow: visible;
+    margin-top: 10.6rem;
+
+    @include u-mqMax {
+      margin-top: 6rem;
+    }
+  }
+}
+
+.box__inner {
+  .sec02 & {
+    position: relative;
+    padding: 4rem 3rem;
+
+    @include u-mqMax {
+      padding: 0;
+    }
+  }
+}
+
+.besides__title {
+  position: absolute;
+  left: 50%;
+  height: 5rem;
+  top: -2.5rem;
+  color: $white;
+  width: 19.8rem;
+  font-weight: bold;
+  background: $pictionBlue;
+  transform: translateX(-50%);
+  @include u-flex($fd: row, $fw: wrap, $jc: center, $ai: center);
+}
+
+.besides__list {
+  @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
+
+  @include u-mqMax {
+    display: block;
+    padding: 3rem 2.7rem .3rem;
+  }
+}
+
+.besides__item {
+  width: 33.33%;
+  padding: 2rem;
+  @include u-flex($fd: row, $fw: wrap, $jc: center, $ai: center);
+
+  @include u-mqMax {
+    width: 100%;
+    height: 9.7rem;
+    padding: 2rem 0;
+    @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: center);
+  }
+
+  &:nth-child(1),
+  &:nth-child(4) {
+    .besides__itemInner {
+      width: 22.9rem;
+
+      @include u-mqMax {
+        // width: 100%;
+      }
+    }
+  }
+
+  &:nth-child(2),
+  &:nth-child(5) {
+    .besides__itemInner {
+      width: 20.8rem;
+
+      @include u-mqMax {
+        // width: 100%;
+      }
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(6) {
+    .besides__itemInner {
+      width: 25rem;
+
+      @include u-mqMax {
+        // width: 100%;
+      }
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(4),
+  &:nth-child(5) {
+    border-right: .1rem dashed $congressBlue;
+
+    @include u-mqMax {
+      border-right: 0;
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-bottom: .1rem dashed $congressBlue;
+  }
+
+  &:nth-child(4) {}
+
+  &:nth-child(5) {}
+
+  &:nth-child(6) {}
+
+  &:not(:last-child) {
+
+    @include u-mqMax {
+      border-bottom: .1rem dashed $congressBlue;
+    }
+  }
+}
+
+.besides__itemInner {
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: flex-start);
+
+  @include u-mqMax {
+    @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: flex-start);
+    flex: 1;
+  }
+}
+
+.besides__itemIcon {
+  width: 2.6rem;
+  margin-right: 1.5rem;
+  margin-top: .3rem;
+}
+
+.besides__itemName {
+  font-weight: bold;
+  color: $congressBlue;
+  white-space: nowrap;
+}

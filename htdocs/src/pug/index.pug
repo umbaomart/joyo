@@ -1,0 +1,822 @@
+//- META INFORMATION
+- const page_title = '常陽銀行の教育ローン'
+- const relativePath = '.'
+- const meta_title = '常陽銀行の教育ローン'
+- const meta_keywords = '茨城,常陽,銀行,教育ローン,学資ローン,入学金,低金利,審査,審査基準,金利'
+- const meta_description = '常陽銀行の公式ホームページです。教育ローンの金利情報や銀行ならではのメリットなどをご紹介しています。大学・短大・高校・専門学校・予備校と様々な用途での利用が可能。医科歯科系にも対応。学資・奨学ローンは常陽銀行へ'
+- const meta_og_url = 'https://www.joyobank.co.jp/personal/loan/education/lp/index.html'
+- const currentPage = '常陽銀行の教育ローン'
+
+
+//- EXTERNAL LIBRARIES
+- const isJquery = true
+- const isWowEffects = false
+- const isSwiper = false
+- const isBootstrap = false
+- const isPolyfill = true
+
+
+//- CONTENT DATA
+-
+
+doctype html
+html(lang="ja")
+    head
+        //- HEAD
+        include ./_inc/_head.pug
+
+
+    body.topPage#top
+        //- HEADER
+        include ./_inc/_siteHeader.pug
+
+        //- MAIN CONTENT
+        main.siteContent(role="main")
+            section.sec01.hero
+                .siteHeader.fadeInUp
+                    .siteHeader__logo
+                        img(src=`${relativePath}/_assets/images/_etc/icon_logo.jpg` alt="logo")
+                .hero__inner.fadeInUp
+                    .hero__kv.fadeInUp
+                        img.u-pcDb(src=`${relativePath}/_assets/images/hero_kv.png`, alt="hero")
+                        img.u-spDb(src=`${relativePath}/_assets/images/hero_kv-sp.png`, alt="hero")
+                    .hero__content
+                        .hero__ttl.fadeInUp
+                            h1.hero__ttlText.commonTtlXl 常陽銀行の教育ローン
+                                span.hero__ttlTextSpan.commonTtlLarge
+                                    | お申込みからご契約まで
+                                    br.u-pcDb
+                                    | スマホで完結！
+                        -
+                            const heroCard = [
+                                {
+                                    point: 'icon_piont-1',
+                                    title: '<span class="text-bold color-blk">WEB</span>契約なら',
+                                    percentage: '<span class="hero__percentageSm">年</span>2.2<span class="hero__percentageSm">%</span>',
+                                    caption: '店頭金利よりもおトク！',
+                                    img: 'icon_web-contact',
+                                    imgSp: 'icon_web-contact-sp'
+                                },
+                                {
+                                    point: 'icon_piont-2',
+                                    title: 'お申し込みからご契約 <br>まで<span class="color-blue">スマホで完結！</span>',
+                                    img: 'icon_app-sp',
+                                },
+                                {
+                                    point: 'icon_piont-3',
+                                    title: 'お借り入れやご返済は <br><span>コンビニ<span class="text-bold color-blue">ATM</span>でも<span class="text-bold color-blue">OK!</span>',
+                                    img: 'icon_atm',
+                                },
+                            ]
+                        .hero__cards.fadeInUp
+                            each item in heroCard
+                                .hero__cardItem
+                                    .hero__cardHeader
+                                        .hero__cardPoint
+                                            img(src=`${relativePath}/_assets/images/icons/${item.point}.png`, alt="")
+                                    .hero__cardBody
+                                        .hero__cardBodyInner
+                                            .hero__cardBodyContent
+                                                p.hero__name.commonLabelXs!=item.title
+                                                if item.percentage
+                                                    p.hero__percentage!=item.percentage
+                                                if item.caption
+                                                    p.hero__caption!=item.caption
+                                        .hero__cardKv(class=`${item.img}`)
+                                            if item.imgSp
+                                                img.u-pcDb(src=`${relativePath}/_assets/images/icons/${item.img}.png`, alt="")
+                                                img.u-spDb(src=`${relativePath}/_assets/images/icons/${item.imgSp}.png`, alt="")
+                                            else
+                                                img(src=`${relativePath}/_assets/images/icons/${item.img}.png`, alt="")
+                        .map.fadeInUp
+                            .map__inner
+                                .map__flex
+                                    .map__left
+                                        .map__sphere
+                                            p.map__sphereName
+                                                | 対象
+                                                br
+                                                | エリア
+                                        p.map__ttl.commonTextMid.u-spDb
+                                            span.text-bold.color-blue 茨城県に限らず、東京・埼玉・千葉
+                                            | など
+                                            br.u-pcDb
+                                            | 各都県にお住まいまたはお勤めの方
+                                    .map__content
+                                        p.map__ttl.commonTextMid.u-pcDb
+                                            span.text-bold.color-blue 茨城県に限らず、東京・埼玉・千葉
+                                            | など
+                                            br.u-pcDb
+                                            | 各都県にお住まいまたはお勤めの方
+                                        p.map__text
+                                            | ※ご利用いただけない場合もありますので、下記のリンク先をご確認ください。
+                                        a(href="https://www.joyobank.co.jp/personal/loan/ichiran.html?kbn=edu" target="_blank" rel="noopener").search.commonTextNormal.commonLink
+                                            span.search_icon
+                                                img(src=`${relativePath}/_assets/images/icons/icon_search-gr.png`, alt="search")
+                                            span.search_text
+                                                | お申し込み可能なエリアを
+                                                br.u-spDb
+                                                | チェックしてみる
+                            .map__kv
+                                img(src=`${relativePath}/_assets/images/map_kv.png`, alt="map")
+                -
+                    const card = [
+                      {
+                        subTtl: '＼ 借り入れできるかまずは確認 ／',
+                        title: '５秒診断',
+                        text: '借入可能額がすぐわかる',
+                        url: 'https://www.joyobank.co.jp/personal/loan/education/shindan.html'
+                      },
+                      {
+                        subTtl: '＼ 返済額の目安を把握しよう ／',
+                        title: 'シミュレーション',
+                        text: '在学中は利息のみの <br>支払いでＯＫ',
+                        url: 'https://www.joyobank.co.jp/personal/loan/education/simulation.html'
+                      },
+                      {
+                        subTtl: '＼ 最短当日中にご回答 ／',
+                        title: '仮審査申し込み',
+                        text: '口座なしでもＯＫ<br>仮審査後のキャンセルＯＫ',
+                        url: 'https://www.joyobank.co.jp/loan/loan4edu.html'
+                      },
+                    ]
+                .heroCards.fadeInUp
+                    .cardList01
+                        each item, index in card
+                            .cardList01__item
+                                .cardList01__header
+                                    p.cardList01__subTtl.commonTextSm !{item.subTtl}
+                                a(href=item.url target="_blank" rel="noopener").cardList01__body.commonLink
+                                    .cardList01__bodyInner
+                                        h3.cardList01__title.commonLabelSm  !{item.title}
+                                        p.cardList01__desc.commonTextSm.u-pcDb !{item.text}
+                .heroCards.js-sticky#js-sticky
+                    .u-pcDb
+                        .cardList01
+                            each item, index in card
+                                .cardList01__item
+                                    .cardList01__header
+                                        p.cardList01__subTtl.commonTextSm !{item.subTtl}
+                                    a(href=item.url target="_blank" rel="noopener").cardList01__body.commonLink
+                                        .cardList01__bodyInner
+                                            h3.cardList01__title.commonLabelSm  !{item.title}
+                                            p.cardList01__desc.commonTextSm.u-pcDb !{item.text}
+                        .itemCenter
+                            a(href="https://www.joyobank.co.jp/personal/loan/ichiran.html?kbn=edu" target="_blank" rel="noopener").search.commonLink.commonTextNormal
+                                span.search_icon
+                                    img(src=`${relativePath}/_assets/images/icons/icon_search-gr.png`, alt="search")
+                                span.search_text.commonTextSm
+                                    | お申し込み可能なエリアを
+                                    br.u-spDb
+                                    | チェックしてみる
+                    .u-spDb
+                        .flexContainer
+                            .flexItem
+                                a.flexItemLink(href="https://www.joyobank.co.jp/personal/loan/education/shindan.html" target="_blank" rel="noopener")
+                                    .flexItemLinkInner
+                                        span.flexItemTitle まずは5秒診断
+                                p.flexItemLinkCaption 借入可能額がすぐわかる
+                            .flexItem
+                                a.flexItemLink(href="https://www.joyobank.co.jp/personal/loan/education/simulation.html" target="_blank" rel="noopener")
+                                    .flexItemLinkInner
+                                        span.flexItemTitle 今すぐ仮審査申込
+                                        span.flexItemSubTitle 口座なしでもＯＫ
+                                p.flexItemLinkCaption 最短当日中に審査結果を回答
+                        .itemCenter
+                            a.flexSpLink(href="https://www.joyobank.co.jp/personal/loan/ichiran.html?kbn=edu" target="_blank" rel="noopener")
+                                | 返済シミュレーションはこちら
+
+
+            section.sec02.fadeInUp
+                .sec02__inner
+                    .inner__container
+                        .secTtl.fadeInUp
+                            p.secTtl__name.commonLabelNormal 常陽銀行 教育ローンが選ばれる
+                            p.secTtl__text.commonLabelLarge
+                                span.secTtl__textXl.commonTtlXl  3つ
+                                | の理由
+                        -
+                            const card02 = [
+                                {
+                                    name: '金 利',
+                                    title: '<span class="cardList02__textSm">年</span>2.2<span class="cardList02__textSm">%</span>',
+                                    subttl: '（変動金利・保証料込）<br>（2022年4月28日現在）',
+                                    textArr:
+                                        [
+                                            '常陽銀行だからできる低金利。店頭金利年3.975％（変動金利・保証料込）のところ、PC・スマホでご契約（WEB契約）なら<span class="text-bold">年2.2％</span>でご利用いただけます。'
+                                        ],
+                                    textList:
+                                        [
+                                            '※店頭でご契約の場合は年0.1％が上乗せになります。<br>※常陽銀行ホームページでご返済の試算が可能です。'
+                                        ],
+                                },
+                                {
+                                    name: '契約方法',
+                                    title: 'いつでもどこでも<br>WEBで契約可能',
+                                    textArr:
+                                        [
+                                            '窓口にお越しいただくことなく、お手元のスマホやPCで<span class="text-bold">いつでもどこでもご契約いただけます。</span>'
+                                        ],
+                                    img: 'contracted-online_kv'
+                                },
+                                {
+                                    name: '借り入れ・返済方法',
+                                    title: 'コンビニATMで<br>いつでも気軽に利用可能',
+                                    textArr:
+                                        [
+                                            'カードローンタイプなので当行にお越しいただくことなく、<span class="text-bold">お好きなタイミングでお借り入れやご返済が可能です。</span>'
+                                        ],
+                                    img: 'atm-store_kv'
+                                },
+                            ]
+                        .cardList02
+                            each item, index in card02
+                                .cardList02__item.fadeInUp
+                                    .cardList02__header
+                                        p.cardList02__num !{index+1}
+                                        p.cardList02__name.commonTextLarge !{item.name}
+                                    .cardList02__itemFlex
+                                        .cardList02__body
+                                            h3.cardList02__title.commonLabelSm !{item.title}
+                                            if item.subttl
+                                                p.cardList02__titleSm.commonTextNormal !{item.subttl}
+                                            each text in item.textArr
+                                                p.cardList02__desc.commonTextMid !{text}
+                                            if item.textList
+                                                each liItem in item.textList
+                                                    p.cardList02__text.commonTextNormal !{liItem}
+                                        if item.img
+                                            figure.cardList02__kv
+                                                img(src=`${relativePath}/_assets/images/${item.img}.png`, alt="")
+
+                        .btn.btn--group.fadeInUp
+                            .btn__item
+                                a.btn__link(href="#accord01")
+                                    | 商品詳細を確認
+                                    img.btn__icon.icon--arrowRight(src=`${relativePath}/_assets/images/icons/icon_arrow-right-wh.png`, alt="")
+                            .btn__item
+                                a.btn__link(href="https://www.joyobank.co.jp/personal/pdf/education_202204.pdf" target="_blank" rel="noopener")
+                                    | 商品説明書を確認
+                                    img.btn__icon.icon--pdf(src=`${relativePath}/_assets/images/icons/icon_pdf-wh.png`, alt="")
+
+                        .secTtl.mt8.fadeInUp
+                            p.secTtl__name.commonLabelNormal 常陽銀行の教育ローンを#[br.u-spDb]選んだ方の声
+                            p.secTtl__desc.commonTextLarge アンケートやインタビューで伺った実際のお客さまの声を記載しています。
+                        .box.boxCommon.boxConversation.fadeInUp
+                            .box__inner
+                                .conversation.fadeInUp
+                                    -
+                                        const convo = [
+                                            {
+                                                color: 'bg-serenade',
+                                                prof: 'prof_0',
+                                                title: '窓口にいかなくてもいいので、少額でもコツコツ返済しやすい。',
+                                                text: 'ATMから返済できるのがとても助かります。1,000円、2,000円という単位の事前返済で窓口に行くのはどうしても気後れしてしまいます。ATMなら、気を遣わずに、コツコツ自分のペースで返済できます。'
+                                            },
+                                            {
+                                                color: 'bg-charlotte',
+                                                prof: 'prof_0',
+                                                title: '100万円利用して、利息は1万円以下でした。',
+                                                text: '入学費と初年度授業料の振り込みで、一時的に常陽銀行教育ローンのその都度タイプを利用しました。もともと夏のボーナスで全て繰上返済するつもりだったので、金利負担も少しで済みました。'
+                                            },
+                                            {
+                                                color: 'bg-paleRose',
+                                                prof: 'prof_0',
+                                                title: '持っておくだけで安心。いざという時のお守り代わりです。',
+                                                text: '息子の高校進学の際、私立に行く可能性があったので念のため、教育ローンに申込みました。無事、公立高校に進学したので、実際は借入はしなかったのですが、何かあった時のために借りられる枠だけは残しています。'
+                                            },
+                                            {
+                                                color: 'bg-iceCold',
+                                                prof: 'prof_0',
+                                                title: '将来、子供にも一部負担してもらう予定です。',
+                                                text: '在学中は何かと費用がかかるので、卒業後、定額返済すればOKなのは、とても助かっています。子供が将来就職してお金を稼げるようになったら、一部負担してもらうつもりでいます。'
+                                            },
+                                        ]
+                                    each item, index in convo
+                                        .conversation__item.fadeInUp(class=`${item.color}`)
+                                            figure.conversation__prof
+                                                img(src=`${relativePath}/_assets/images/${item.prof+(index+1)}.png`, alt="常陽銀行の教育ローンを選んだ方の声")
+                                            .conversation__message
+                                                p.conversation__name.commonTextLarge !{item.title}
+                                                p.conversation__desc.commonTextNormal !{item.text}
+
+                        .box.boxCommon.besides.fadeInUp
+                            .box__inner
+                                p.besides__title.commonTextLarge その他にも…
+                                .besides__list
+                                    -
+                                        const listData = [
+                                            {name: "在学中は利息のみの<br>返済でOK"},
+                                            {name: "繰上返済手数料が<br>無料！"},
+                                            {name: "進学先が決まる前でも<br>申込が可能！"},
+                                            {name: "在学中の追加利用は<br>審査不要"},
+                                            {name: "保証料が無料！"},
+                                            {name: "最大1,000万円まで<br>お申込可能！"},
+                                        ]
+                                    each item in listData
+                                        .besides__item
+                                            .besides__itemInner
+                                                .besides__itemIcon
+                                                    img(src=`${relativePath}/_assets/images/icons/icon_circle-check-bl.png`, alt="")
+                                                p.besides__itemName.commonTextLarge !{item.name}
+
+
+
+
+            section.sec03.recforcustomers.fadeInUp
+                .sec03__inner.fadeInUp
+                .inner__container
+                    .secTtl
+                        h2.secTtl__name.commonLabelNormal
+                            | 常陽銀行の
+                            br.u-spDb
+                            | 教育ローンは
+                            br
+                            | こんなお客さまに
+                            br.u-spDb
+                            | おすすめ！
+                    -
+                        const card03 = [
+                            {
+                                img: 'exam-fee_kv',
+                                name: '受験料・入学金の<br class="u-pcDb">ご準備',
+                            },
+                            {
+                                img: 'prep-school_kv',
+                                name: '予備校や塾、夏期・<br>冬期講習の受講費用',
+                            },
+                            {
+                                img: 'calculator_kv',
+                                name: '授業料の支払いや<br>教科書代などの諸費用',
+                            },
+                            {
+                                img: 'transpo_kv',
+                                name: '通学するための<br class="u-pcDb">交通費',
+                            },
+                            {
+                                img: 'remit_kv',
+                                name: '一人暮らしの家賃・<br>生活費のための仕送り',
+                            },
+                            {
+                                img: 'refinancing_kv',
+                                name: '他金融機関からの<br class="u-pcDb">お借り換え',
+                            },
+                            {
+                                img: 'passport_kv',
+                                name: '海外留学・<br class="u-pcDb">海外実習等の費用',
+                            },
+                            {
+                                img: 'educ-cost_kv',
+                                name: '入学金や授業料など<br>お支払い済の教育費用',
+                            },
+                        ]
+                .cardList03
+                    each item, index in card03
+                        .cardList03__item.fadeInUp
+                            .cardList03__kv
+                                img.u-pcDb(src=`${relativePath}/_assets/images/educ-loan/${item.img}.png`, alt='')
+                                img.u-spDb(src=`${relativePath}/_assets/images/educ-loan/${item.img}-sp.png`, alt='')
+                            .cardList03__name.commonTextMid !{item.name}
+
+            section.sec04.typeOfLoan.fadeInUp
+                .sec04__inner
+                    .inner__container
+                        .secTtl.fadeInUp
+                            p.secTtl__sm.commonTextLarge こんなあなたにおすすめ！
+                            h2.secTtl__name.commonLabelNormal
+                                | 常陽銀行
+                                br.u-spDb
+                                | カードローン型
+                                br.u-spDb
+                                | 教育ローン
+                        .box.boxCommon.educType.fadeInUp
+                            .box__inner
+                                .educType__flex
+                                    -
+                                        const educationType = [
+                                            {
+                                                name: 'いくら必要かまだ<br class="u-spDb">はっきり分からない方',
+                                                img: 'icon_calc-money',
+                                                content: [
+                                                    'まとめて一気に借りずに、毎年の学費振り込みのタイミングなどにあわせて追加利用することが可能です。',
+                                                    '最初に設定したご利用枠の範囲内であれば、<span class="text-blue text-bold">審査や書類提出無しで追加利用できる</span>ため、すぐには必要のない資金の分の金利負担を<span class="text-blue text-bold">セーブでき、いくら必要かまだはっきりわからない方にはおすすめです。</span>'
+                                                ]
+                                            },
+                                            {
+                                                name: '利息の発生を<br class="u-spDb">極力抑えたい方',
+                                                img: 'icon_atm-interest',
+                                                content: [
+                                                    '資金の余裕が出来たら、<span class="text-blue text-bold">繰上返済で利息の発生を抑えられます</span>。繰上返済は何度しても<span class="text-blue text-bold">手数料無料</span>で、利息の発生を極力抑えながらご利用いただけます。',
+                                                    '全国のコンビニATM（E-net、セブン銀行ATM、ローソン銀行ATM）、常陽銀行ATMやゆうちょ銀行ATMから<span class="text-blue text-bold">1,000円単位でご返済が可能</span>です。また、インターネットバンキング「アクセスジェイ」からもご返済が可能です。'
+                                                ]
+                                            },
+                                        ]
+                                    each item in educationType
+                                        .educType__item
+                                            .educType__header
+                                                .educType__label
+                                                    .educType__labelIcon
+                                                        img(src=`${relativePath}/_assets/images/icons/icon_circle-check-bl.png`, alt="")
+                                                    p.educType__labelName.commonLabelXs !{item.name}
+                                            .educType__body
+                                                .educType__kv(class=`${item.img}`)
+                                                    img(src=`${relativePath}/_assets/images/icons/${item.img}.png`, alt="")
+                                                each text in item.content
+                                                    p.educType__content.commonTextNormal !{text}
+                        .accord01
+                            #accord01
+                            .accord01__item.fadeInUp
+                                .accord01__header.js-accordion
+                                    p.accord01__headerName.commonLabelSm ご利用までの流れ
+                                    span.accord01__headerArrow
+                                .accord01__body
+                                    p.accord01__bodyTitle.lineLemonBg.commonLabelMid かんたん<span class="accord01__headerNumber">4</span>STEP
+                                    p.accord01__bodySubTitle.commonTextLarge 仮審査申し込みから<span class="text-bold">最短約1～2週間でご融資可能！</span>
+
+                                    -
+                                        const card04 = [
+                                            {
+                                                name: '仮審査お申し込み',
+                                                list: [
+                                                    'インターネットなら毎日24時間受付中。',
+                                                    '合格の6ヶ月前から仮審査のお申し込みができます。'
+                                                ],
+                                            },
+                                            {
+                                                name: '仮審査結果のご連絡',
+                                                list: [
+                                                    '最短お申し込み当日に電子メールで仮審査結果をお知らせ。',
+                                                ],
+                                                caption: '※仮審査結果は、6ヵ月間有効です。'
+                                            },
+                                            {
+                                                name: '正式なお申し込み',
+                                                list: [
+                                                    'WEBでお申し込みできます。',
+                                                    'スマホのカメラで必要書類を撮影しアップロード。',
+                                                    'お申し込みからご契約までWEB完結！'
+                                                ],
+                                            },
+                                            {
+                                                name: 'ご融資',
+                                                list: [
+                                                    '専用のカードをお客さまのお手元に郵送いたします。',
+                                                    '専用のカードを使いATMでお借り入れやご返済が可能です。'
+                                                ],
+                                            }
+                                        ]
+                                    .cardList04
+                                        each item, index in card04
+                                            .cardList04__item
+                                                .cardList04__header
+                                                    p.cardList04__headerStep.commonTextNormal  STEP
+                                                    p.cardList04__headerNo !{index+1}
+                                                .cardList04__body
+                                                    .cardList04__bodyName.commonTextLarge  !{item.name}
+                                                    .cardList04__bodyList
+                                                        each list in item.list
+                                                            p.cardList04__bodyListItem.commonTextNormal !{list}
+                                                    if item.caption
+                                                        p.cardList04__bodyCaption.commonTextSm !{item.caption}
+                                    ul.content__list
+                                        li.content__listItem.commonTextSm ※正式申し込み後、各種確認資料の内容等をもとに正式審査を行います。正式審査は仮審査結果と異なる場合がございます。
+                                        li.content__listItem.commonTextSm ※窓口でのお手続きも可能です。窓口でお手続きの場合、金利が上乗せになります。また、店頭取扱手数料がかかります。
+
+                            .accord01__item.fadeInUp
+                                .accord01__header.js-accordion
+                                    p.accord01__headerName.commonLabelSm   常陽教育ローンのおトクな金利
+                                    span.accord01__headerArrow
+                                .accord01__body
+                                    p.accord01__bodyName.commonTextLarge
+                                        |  店頭金利年3.975％
+                                        br.u-spDb
+                                        | （変動金利・保証料込）
+                                        br.u-spDb
+                                        | のところ、
+                                        br.u-spDb
+                                        span.lineLemonBg スマホやPCでのご契約なら
+                                    p.accord01__bodyPercentage
+                                        span.accord01__bodyPercentageSm 年
+                                        | 2.2
+                                        span.accord01__bodyPercentageSm %
+                                    p.accord01__bodyPercentageCaption.commonTextMid.commonTextNormal  （変動金利・保証料込）
+
+                                    .content.commonContent
+                                        .content.commonContentGroup.group01
+                                            p.content__label.commonTextMid めぶき信用保証（株）での審査の結果、保証が得られない場合は、SMBCファイナンスサービス（株）で審査となります。
+                                            ul.content__list
+                                                .content__listItem.commonTextSm ※SMBCファイナンスサービス（株）保証付きの場合は、証書貸付型となります。
+                                                .content__listItem.commonTextSm ※「保証料込」とは、保証料を含んだ金利を表示しています。他の教育ローンと比較する場合には、見た目の金利だけでなく、保証料にも注意して比較する事が重要です。追加の「保証料」がかかる場合、金利1～2％の違いになることもあります。
+                                                .content__listItem.commonTextSm ※複数の金利割引の条件を適用することはできません。
+                                        .content.commonContentGroup.group02
+                                            p.content__labelList.commonTextMid ─ ご留意事項 ─
+                                            ul.content__list.listStyleDisc.noMt
+                                                li.content__listItem.commonTextNormal 他の金利割引制度等との併用はできません。
+                                                li.content__listItem.commonTextNormal 金利はお借入れ日の金利が適用となります。
+                                                li.content__listItem.commonTextNormal 金利情勢により、金利は変更になる場合がございます。
+                                                li.content__listItem.commonTextNormal 常陽銀行HP、店頭に商品説明書をご用意しております。また金利割引条件の確認やご返済の試算が可能です。
+                                                li.content__listItem.commonTextNormal ご融資には審査があります。審査の結果、ご希望に添いかねる場合がございますので、ご了承ください。
+                                                li.content__listItem.commonTextNormal 店頭でご契約の場合、取扱手数料5,500円（消費税込）が必要になります。
+                                                li.content__listItem.commonTextNormal 返済条件を変更する際は、手数料が必要です。#[br] <span class="alignRight">（2022年4月28日現在）</span>
+                                    .btn.btn--group.mt20
+                                        .btn__item
+                                            a.btn__link(href="#accord01")
+                                                | 商品詳細を確認
+                                                img.btn__icon.icon--arrowRight(src=`${relativePath}/_assets/images/icons/icon_arrow-right-wh.png`, alt="")
+                                        .btn__item
+                                            a.btn__link(href="https://www.joyobank.co.jp/personal/pdf/education_202204.pdf" target="_blank")
+                                                | 商品説明書を確認
+                                                img.btn__icon.icon--pdf(src=`${relativePath}/_assets/images/icons/icon_pdf-wh.png`, alt="")
+
+                            .accord01__item.fadeInUp
+                                .accord01__header.js-accordion
+                                    p.accord01__headerName.commonLabelSm  商品詳細
+                                    span.accord01__headerArrow
+                                .accord01__body
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge ご利用いただける方
+                                        .contentData
+                                            .contentDataGroup
+                                                p.contentData__name.commonTextMid  日本国内にお住まいの方
+                                                p.contentData__desc.commonTextNormal 茨城県外にお住まいでもご利用いただけます
+                                                a.commonLink.commonTextNormal(href="https://www.joyobank.co.jp/personal/loan/ichiran.html?kbn=edu" target="_blank" rel="noopener")
+                                                    p.contentData__descSearch
+                                                        span.contentData__descSearchIcon
+                                                            img(src=`${relativePath}/_assets/images/icons/icon_search-gr.png`, alt="")
+                                                        | お申し込み可能なエリアを#[br.u-spDb]チェックしてみる
+                                            .contentDataGroup
+                                                p.contentData__name.commonTextMid  大学・短大・各種専修学校・高校・中学校・小学校・幼稚園・保育園などにご進学、または在学する学生の保護者の方
+                                            .contentDataGroup
+                                                p.contentData__name.commonTextMid  申し込み時年齢18歳以上65歳未満で、完済時71歳未満の方
+                                                p.contentData__desc.commonTextNormal ※カードローン型教育ローンの場合、申し込み時年齢18歳以上65歳未満の方
+                                            .contentDataGroup
+                                                p.contentData__name.commonTextMid  同一勤務先に1年以上勤務または同一事業を3年以上営業している方
+                                                p.contentData__desc.commonTextNormal ※年金受給者、産休・育休・介護休取得者の方（予定者、復職後1年未満の方を含む）もご利用いただけます。
+                                            .contentDataGroup
+                                                p.contentData__name.commonTextMid  安定収入の見込める方
+                                                p.contentData__desc.commonTextNormal ※外国人のお客さまは永住許可を受けている方が対象となります。
+                                                p.contentData__desc.commonTextNormal ※ご利用に際しては、当行指定の保証会社（めぶき信用保証（株）またはSMBCファイナンスサービス（株））の保証を受けて頂きます。
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge お使いみち
+                                        .contentData
+                                            p.contentData__text.commonTextMid
+                                                | 入学金、授業料、仕送りなど教育に関する費用（お支払い済でもOK）
+                                                br
+                                                | 他金融機関でお借り入れ中の教育ローンのお借り換え
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge 保証会社について
+                                        .contentData
+                                            p.contentData__text.commonTextMid  当行指定の保証会社は、めぶき信用保証（株）またはSMBCファイナンスサービス（株）となっています。
+                                            p.contentData__text.commonTextMid  めぶき信用保証（株）での審査の結果、保証が得られない場合は、自動的にSMBCファイナンスサービス（株）に審査を依頼しますのでご了承ください。
+                                            p.contentData__caption.commonTextSm ※SMBCファイナンスサービス（株）保証付の場合は、カードローン型教育ローンがご利用いただけません。一括借入タイプ（証書貸付型）となります。
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge ご融資額
+                                        .contentData
+                                            p.contentData__text.commonTextMid  カードローン型教育ローンのご利用は1,000万円以内となります。
+                                            p.contentData__text.commonTextMid  お子様が進学、または在学する学校の種類によって異なります。
+                                            p.contentData__text.commonTextMid  税込年収の範囲内とさせていただきます。ただし、「茨城県医師教育資金利子補給事業」を利用する場合、税込年収を超えてお申し込みが可能です。
+                                        .contentTable.contentTable01
+                                            table.contentTableMain
+                                                tr
+                                                    th 学校の種類
+                                                    th 学校の種類
+                                                tr
+                                                    td 大学・大学院（医学部・歯学部・薬学部）
+                                                    td 50万円以上3,000万円以内（10万円単位）
+                                                tr
+                                                    td 大学・大学院、短大・職業訓練学校、専修学校、各種学校、#[br.u-pcDb]予備校、高校、中学校、小学校、幼稚園、保育園
+                                                    td 50万円以上1,000万円以内（10万円単位）
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge 金利
+                                        .contentData
+                                            p.contentData__text.commonTextMid  変動金利（年1回）
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge 担保・保証人
+                                        .contentData
+                                            p.contentData__text.commonTextMid 不要です#[br]（めぶき信用保証（株）またはSMBCファイナンスサービス（株）が保証します。保証料は当行が負担します。）
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge 手数料
+                                        .contentData
+                                            p.contentData__text.commonTextMid  店頭でお申し込みの場合、取扱手数料5,500円（消費税込）が必要です。
+                                            p.contentData__caption.commonTextSm ※カードローン型教育ローンの場合、手数料は不要です。
+                                            p.contentData__text.commonTextMid.mt20  ◎返済条件を変更する場合、条件変更手数料11,000円（消費税込）が必要です。
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge ご融資期間
+                                        .contentData
+                                            p.contentData__text.commonTextMid  ご入学の8カ月前からご利用いただけます。
+                                            .contentDataGroup
+                                                p.contentData__name.commonTextMid カードローン型教育ローンの場合
+                                                p.contentData__text.commonTextNormal お子さまの在学期間中はお利息のみお支払いいただき、お子さまのご卒業後の翌月以降、貸越利用期限日時点のご利用残高に応じて、毎月5日下記のご返済をいただきます。
+                                        .contentTable.contentTable02
+                                            table.contentTableMain
+                                                tr
+                                                    th 当座貸越利用期限日の#[br.u-spDb]貸越残高
+                                                    th 毎月の#[br.u-spDb]返済金額
+                                                -
+                                                    const tableData = [
+                                                        {
+                                                            name: "50万円以下",
+                                                            value: "1万円"
+                                                        },
+                                                        {
+                                                            name: "50万円超100万円以下",
+                                                            value: "2万円"
+                                                        },
+                                                        {
+                                                            name: "100万円超200万円以下",
+                                                            value: "3万円"
+                                                        },
+                                                        {
+                                                            name: "200万円超300万円以下",
+                                                            value: "4万円"
+                                                        },
+                                                        {
+                                                            name: "300万円超400万円以下",
+                                                            value: "5万円"
+                                                        },
+                                                        {
+                                                            name: "400万円超600万円以下",
+                                                            value: "6万円"
+                                                        },
+                                                        {
+                                                            name: "600万円超800万円以下",
+                                                            value: "7万円"
+                                                        },
+                                                        {
+                                                            name: "800万円超",
+                                                            value: "8万円"
+                                                        }
+                                                    ]
+                                                each item in tableData
+                                                    tr
+                                                        td !{item.name}
+                                                        td !{item.value}
+                                        .contentDataGroup
+                                            p.contentData__name.commonTextMid カードローン型教育ローンの場合
+                                            p.contentData__text.commonTextNormal お子さまの在学期間中はお利息のみお支払いいただき、元金はご卒業後10年以内にご返済（※）いただきます。
+                                            p.contentData__text.commonTextNormal ご融資期間：6カ月以上16年8カ月以内
+                                            p.contentData__text.commonTextNormal 入学前8カ月＋修業年数（最長6年間）の据置きが可能（利息は毎月払い）です。
+                                            p.contentData__text.commonTextNormal 元金据置期間終了後は10年以内（6カ月単位）
+                                            p.contentData__text.commonTextNormal 据置きを希望しない場合のご融資期間は10年以内となります。
+                                            p.contentData__caption.commonTextSm ※当月4日（銀行休業日の場合は前営業日）の貸越残高が「毎月の返済金額」に満たない場合は、当月4日の貸越元利金が返済額となります。
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge ご契約に必要な書類
+                                        .contentDataGroup
+                                            p.contentData__name.commonTextMid 本人確認書類（運転免許証・健康保険証のいずれか）
+                                            p.contentData__text.commonTextSm ※外国人の方は、永住権確認のため、在留カード等も必要となります。
+                                        .contentDataGroup
+                                            p.contentData__name.commonTextMid 住民票謄本（ご家族全員記載のもの）
+                                        .contentDataGroup
+                                            p.contentData__name.commonTextMid 前年の年収が確認できる書類（源泉徴収票または公的証明書等）
+                                            p.contentData__text.commonTextSm ※前年に中途入社した方（中途入社した会社での勤続年数が1年以上の場合）は、直近3カ月分の給与明細書が必要となります。
+                                            p.contentData__text.commonTextSm ※個人事業主の方は、前年の所得金額が確認できる公的所得証明書または納税証明書（その2）が必要です。
+                                            p.contentData__text.commonTextSm ※前年の所得金額が確認できる公的所得証明書および納税証明書（その2）のいずれも発行されていない場合、前々年の所得金額が確認できる公的所得証明書または納税証明書（その2）が必要です。
+                                            p.contentData__text.commonTextSm ※産休、育休、介護休から復職後間もない方は、直近の給与明細や勤務先が発行する給与証明書などが必要です。
+                                        .contentDataGroup
+                                            p.contentData__name.commonTextMid ご入学・ご在学確認資料
+                                            p.contentData__text.commonTextNormal 【ご入学】
+                                            p.contentData__text.commonTextNormal 合格通知書・入学証明書
+                                            p.contentData__text.commonTextNormal 【ご在学】
+                                            p.contentData__text.commonTextNormal 学生証・生徒手帳・在学証明書・通帳等（校納金や学費の口座振替により在籍が確認できる資料）・子弟の在学校より送付された直近期の学費納入通知書等の写等
+                                            p.contentData__text.commonTextNormal 「茨城県医師教育資金利子補給事業」を利用する場合は、「茨城県教育資金利子補給金交付予約決定通知書」をご準備ください。
+                                            p.contentData__text.commonTextSm.adjustTop ※上記以外にもご提出をお願いする場合があります。
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge カードローン型教育ローンに関する注意事項
+                                        .contentDataGroup
+                                            p.contentData__text.hasInlinePd.commonTextSm ※当行では、偽造カード・盗難カードによるお客さまの被害を最小限に止めるため、ATMの1日あたりご利用限度額を100万円（うち現金お引出し50万円）とさせていただいております。
+                                        .contentDataGroup
+                                            p.contentData__text.hasInlinePd.commonTextSm ※100万円を超えてご利用になる場合には、お手数でもキャッシュカード、普通預金の通帳（現金をお引き出しの場合）やお届けのご印鑑をご持参の上、ご本人さまがお取引店の窓口にてお手続きくださいますようお願いいたします。
+                                        .contentDataGroup
+                                            p.contentData__text.hasInlinePd.commonTextSm ※なお、お客さまのご希望によりATMの1日あたりご利用限度額を200万円まで引き上げることもできますので、お手持ちのローンカードとお届けのご印鑑、運転免許証等の本人確認書類をお持ちの上、ご本人さまが当行の窓口でお手続きをお願いいたします。
+
+                                    .accord01__bodyBox
+                                        p.accord01__bodyLabelFluid.commonTextLarge その他
+                                        .contentData
+                                            p.contentData__text.commonTextLarge 審査の結果ご希望に添いかねる場合もございますのでご了承ください。
+                                            p.contentData__text.commonTextMid.align-right 2022年5月現在
+
+            section.sec05.faq.fadeInUp
+                .faq__banner.fadeInUp
+                    img.u-pcDb(src=`${relativePath}/_assets/images/faq_kv.jpg`, alt="よくあるご質問")
+                    img.u-spDb(src=`${relativePath}/_assets/images/faq_kv-sp.jpg`, alt="よくあるご質問")
+                .faq__inner
+                    .secTtl.fadeInUp
+                        p.secTtl__name.commonLabelNormal よくあるご質問
+                    .inner__container
+                        .accord02
+                            .accord02__item.fadeInUp
+                                .accord02__header.js-accordion
+                                    p.accord02__headerLabel.commonLabelXs
+                                        span.accord02__headerLetter Q.
+                                        | 一括借入れタイプとその都度タイプ、どちらを選べばいいでしょうか？
+                                    span.accord02__headerArrow
+                                .accord02__body
+                                    .accord02__bodyFlex
+                                        p.accord02__bodyLetter.commonLabelXs A.
+                                        .accord02__bodyInner
+                                            p.accord02__bodyAnswer.commonTextMid
+                                                | 一括借入れタイプとその都度タイプ、どちらを選べばいいでしょうか？
+                                            p.accord02__bodyDesc.commonTextNormal
+                                                | たとえば、事前に200万円で仮審査をお申し込みいただいたとしても、実際に必要な額が150万円だったら、借り入れ額は150万円になります。また、お借入れが不要になった場合にはキャンセルも可能です。もちろん、手数料は一切不要です。
+                                    .accord02__bodyBtn
+                                        a.accord02__bodyBtnItem.commonTextNormal(href="https://www.joyobank.co.jp/personal/loan/education/sonotsudo.html" target="_blank" rel="noopener")
+                                            | その都度タイプの特長
+                                            img.accord02__bodyBtnItemArrow(src=`${relativePath}/_assets/images/icons/icon_arrow-right-wh.png`, alt="arrow")
+                            .accord02__item.fadeInUp
+                                .accord02__header.js-accordion
+                                    p.accord02__headerLabel.commonLabelXs
+                                        span.accord02__headerLetter Q.
+                                        | 審査時に申し込んだ金額を全て借りないといけませんか？キャンセルできますか？
+                                    span.accord02__headerArrow
+                                .accord02__body
+                                    .accord02__bodyFlex
+                                        p.accord02__bodyLetter.commonLabelXs A.
+                                        .accord02__bodyInner
+                                            p.accord02__bodyAnswer.commonTextMid
+                                                | 実際の借入れ額は、必要な額だけ。審査だけしておいて、後でキャンセルも可能です。
+                                            p.accord02__bodyDesc.commonTextNormal
+                                                | たとえば、事前に200万円で仮審査をお申し込みいただいたとしても、実際に必要な額が150万円だったら、借り入れ額は150万円になります。また、お借入れが不要になった場合にはキャンセルも可能です。もちろん、手数料は一切不要です。
+                            .accord02__item.fadeInUp
+                                .accord02__header.js-accordion
+                                    p.accord02__headerLabel.commonLabelXs
+                                        span.accord02__headerLetter Q.
+                                        | 忙しくて、平日に銀行へ行くことができないのですが。
+                                    span.accord02__headerArrow
+                                .accord02__body
+                                    .accord02__bodyFlex
+                                        p.accord02__bodyLetter.commonLabelXs A.
+                                        .accord02__bodyInner
+                                            p.accord02__bodyAnswer.commonTextMid
+                                                | 1度も来店せずにご契約することもできます。
+                                            p.accord02__bodyDesc.commonTextNormal
+                                                | 常陽教育ローンなら、1度も来店せずにご契約が完了できるので、お忙しい方でも安心です。仮審査のお申し込みからご契約までネットで完結！（ご来店不要サービス）。お手続きの流れについては、こちらをご参照ください。
+                            .accord02__item.fadeInUp
+                                .accord02__header.js-accordion
+                                    p.accord02__headerLabel.commonLabelXs
+                                        span.accord02__headerLetter Q.
+                                        | 契約時に必要となる書類を教えてください。
+                                    span.accord02__headerArrow
+                                .accord02__body
+                                    .accord02__bodyFlex
+                                        p.accord02__bodyLetter.commonLabelXs A.
+                                        .accord02__bodyInner
+                                            p.accord02__bodyAnswer.commonTextMid
+                                                | 以下4種類の書類をご用意ください。
+                                                span.accord02__bodyAnswerSpan.commonTextSm
+                                                    | ※下記以外にもご提出をお願いする場合があります
+                                            ul.accord02__bodyList
+                                                li.accord02__bodyListItem.commonTextNormal 本人確認書類（運転免許証・健康保険証のいずれか）
+                                                li.accord02__bodyListItem.commonTextNormal 住民票謄本（ご家族全員記載のもの）
+                                                li.accord02__bodyListItem.commonTextNormal 年収の確認できる書類（源泉徴収票または公的証明書）
+                                                li.accord02__bodyListItem.commonTextNormal ご入学・ご在学確認資料（ご入学・・・合格通知書・入学証明書　ご在学・・・在学証明書）
+                                            p.accord02__bodyCaption.commonTextSm  ※上記以外の書類のご提出をお願いする場合もあります。
+                            .accord02__item.fadeInUp
+                                .accord02__header.js-accordion
+                                    p.accord02__headerLabel.commonLabelXs
+                                        span.accord02__headerLetter Q.
+                                        | 繰り上げ返済は可能ですか？
+                                    span.accord02__headerArrow
+                                .accord02__body
+                                    .accord02__bodyFlex
+                                        p.accord02__bodyLetter.commonLabelXs A.
+                                        .accord02__bodyInner
+                                            p.accord02__bodyAnswer.commonTextMid
+                                                | 手数料無料で何度でも繰上返済可能です。
+                                            p.accord02__bodyDesc.commonTextNormal
+                                                | さらに「その都度タイプ」なら、お近くの常陽銀行ATMで1,000円単位で何度でも繰上返済可能です。
+                                                br
+                                                | 繰上返済をすることで、利息の発生を抑えることができます。
+                                    .accord02__bodyBtn
+                                        a.accord02__bodyBtnItem.commonTextNormal(href="https://www.joyobank.co.jp/personal/loan/education/sonotsudo.html" target="_blank" rel="noopener")
+                                            | その都度タイプの特長
+                                            img.accord02__bodyBtnItemArrow(src=`${relativePath}/_assets/images/icons/icon_arrow-right-wh.png`, alt="arrow")
+                            .accord02__item.fadeInUp
+                                .accord02__header.js-accordion
+                                    p.accord02__headerLabel.commonLabelXs
+                                        span.accord02__headerLetter Q.
+                                        | 年収が低いので、審査に通るかどうか心配です。
+                                    span.accord02__headerArrow
+                                .accord02__body
+                                    .accord02__bodyFlex
+                                        p.accord02__bodyLetter.commonLabelXs A.
+                                        .accord02__bodyInner
+                                            p.accord02__bodyAnswer.commonTextMid
+                                                | ホームページ上で、借りられるかどうか5秒で診断できます。
+                                            p.accord02__bodyDesc.commonTextNormal
+                                                | 簡易的な診断であれば、ホームページ上でかんたんにできますので、ぜひ診断してみてください。
+                                    .accord02__bodyBtn
+                                        a.accord02__bodyBtnItem.bg--rose.commonTextNormal(href="https://www.joyobank.co.jp/personal/loan/education/shindan.html" target="_blank")
+                                            | 5秒診断
+                                            img.accord02__bodyBtnItemArrow(src=`${relativePath}/_assets/images/icons/icon_arrow-right-wh.png`, alt="arrow")
+
+        //- FOOTER
+        include ./_inc/_siteFooter.pug

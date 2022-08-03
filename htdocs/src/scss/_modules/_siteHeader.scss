@@ -1,0 +1,37 @@
+/*====================================================================
+siteHeader
+====================================================================*/
+.siteHeader {
+  z-index: 100;
+  position: relative;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 7rem;
+  // position: absolute;
+  // z-index: 100;
+  // @include u-trs;
+
+  // &.is-sticky {
+  //   background: $congressBlue;
+  // }
+}
+
+.siteHeader__logo {
+  @include u-trs;
+  position: absolute;
+  width: 22.6rem;
+  left: 3.5rem;
+  top: 3.5rem;
+  z-index: 101;
+
+  @include u-mqMax {
+    left: 1.5rem;
+    top: 1.5rem;
+    width: 15rem;
+  }
+
+  // .is-sticky & {
+  //   top: 1.5rem;
+  // }
+}

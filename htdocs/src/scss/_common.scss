@@ -1,0 +1,348 @@
+/*====================================================================
+COMMON LAYOUT
+====================================================================*/
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  // Liquid
+  @include u-mqMax(1300px) {
+    font-size: calc(10vw / 13.0);
+  }
+
+  // SP
+  @include u-mqMax($maxW: $windowSP) {
+    font-size: calc(10vw / 3.75);
+  }
+}
+
+body {
+  position: relative;
+  @include fontFeature;
+  -webkit-print-color-adjust: exact;
+  font-family: $NotosansJP;
+
+  // Liquid
+  @include u-mqMax() {}
+
+  // SP
+  @include u-mqMax($maxW: $windowSP) {}
+}
+
+/*-----------------------------------------------
+PC/SP
+------------------------------------------------*/
+// PC
+.u-pcDb {
+  display: block;
+}
+
+.u-pcDib {
+  display: inline-block;
+}
+
+.u-pcDin {
+  display: inline;
+}
+
+.u-pcDf {
+  display: flex;
+}
+
+.u-pcDt {
+  display: table;
+}
+
+.u-pcDtc {
+  display: table-cell;
+}
+
+.u-spDb,
+.u-spDib,
+.u-spDin,
+.u-spDf,
+.u-spDt,
+.u-spDtc {
+  display: none;
+}
+
+// SP
+@include u-mqMax($maxW: $windowSP) {
+
+  .u-pcDb,
+  .u-pcDib,
+  .u-pcDin,
+  .u-pcDf,
+  .u-pcDt,
+  .u-pcDtc {
+    display: none;
+  }
+
+  .u-spDb {
+    display: block;
+  }
+
+  .u-spDib {
+    display: inline-block;
+  }
+
+  .u-spDin {
+    display: inline;
+  }
+
+  .u-spDf {
+    display: flex;
+  }
+
+  .u-spDt {
+    display: table;
+  }
+
+  .u-spDtc {
+    display: table-cell;
+  }
+}
+
+/*-----------------------------------------------
+main
+------------------------------------------------*/
+.siteContent {
+
+
+  // SP
+  @include u-mqMax($maxW: $windowSP) {}
+}
+
+.commonTtlXl {
+  letter-spacing: .05em;
+  @include commonTtlXl;
+}
+
+.commonTtlLarge {
+  letter-spacing: .05em;
+  @include commonTtlLarge;
+}
+
+.commonTtlMid {
+  letter-spacing: .05em;
+  @include commonTtlMid;
+}
+
+.commonTtlNormal {
+  letter-spacing: .05em;
+  @include commonTtlNormal;
+}
+
+.commonLabelLarge {
+  letter-spacing: .05em;
+  @include commonLabelLarge;
+}
+
+.commonLabelMid {
+  letter-spacing: .05em;
+  @include commonLabelMid;
+}
+
+.commonLabelNormal {
+  letter-spacing: .05em;
+  @include commonLabelNormal;
+}
+
+.commonLabelSm {
+  letter-spacing: .05em;
+  @include commonLabelSm;
+}
+
+.commonLabelXs {
+  letter-spacing: .05em;
+  @include commonLabelXs;
+}
+
+.commonTextLarge {
+  letter-spacing: .05em;
+  @include commonTextLarge;
+}
+
+.commonTextMid {
+  letter-spacing: .05em;
+  @include commonTextMid;
+}
+
+.commonTextNormal {
+  letter-spacing: .05em;
+  @include commonTextNormal;
+}
+
+.commonTextSm {
+  letter-spacing: .05em;
+  @include commonTextSm;
+}
+
+.inner__container {
+  width: 100%;
+  max-width: 113rem;
+  margin: 0 auto;
+}
+
+.secTtl {
+  text-align: center;
+  color: $congressBlue;
+  @include u-flex($fd: column, $fw: nowrap, $jc: center, $ai: center);
+
+  &.mt8 {
+    margin-top: 8rem;
+
+    @include u-mqMax {
+      margin-top: 4rem;
+    }
+  }
+}
+
+
+.secTtl__name {
+  color: $congressBlue;
+
+  .typeOfLoan & {
+    color: $white;
+  }
+}
+
+.secTtl__name,
+.secTtl__text {
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: .05em;
+}
+
+.secTtl__text {
+  line-height: 1;
+  position: relative;
+  color: $congressBlue;
+  padding-bottom: 1rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.7rem;
+    left: 0;
+    bottom: 0;
+    background: url(../images/title_border-bg.png) no-repeat center;
+    background-size: 100% 100%;
+  }
+}
+
+.secTtl__textXl {
+  line-height: 1;
+  color: $lesterLemon;
+  -webkit-text-stroke: .1rem $congressBlue;
+}
+
+.secTtl__sm {
+  font-weight: 900;
+  color: $white;
+}
+
+.btn.btn--group {
+  width: 100%;
+  max-width: 64rem;
+  margin: 6rem auto 0;
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+  @include u-mqMax {
+    display: block;
+    width: 30rem;
+    margin: 4rem auto 0;
+  }
+
+  .accord01__item & {
+    margin: 0 auto;
+  }
+
+  &.mt20 {
+    margin-top: 2rem;
+  }
+}
+
+.btn__item {
+  width: 30rem;
+  text-align: center;
+
+  @include u-mqMax {
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.btn__link {
+  width: 100%;
+  height: 5rem;
+  color: $white;
+  @include u-trs;
+  font-weight: bold;
+  position: relative;
+  font-size: $text16;
+  border-radius: 1.5rem;
+  letter-spacing: .05em;
+  padding: 1.3rem 1.5rem;
+  background: $congressBlue;
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+  box-shadow: .8rem .8rem 1.5rem rgba($color: #000000, $alpha: .2);
+
+  &:hover {
+    opacity: .7;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.btn__icon {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &.icon--arrowRight {}
+
+  &.icon--pdf {}
+}
+
+.commonLink {
+  @include u-trs;
+  text-decoration: none;
+
+  &:hover {
+    opacity: .7;
+    text-decoration: none;
+  }
+}
+
+.fadeInUp {
+  opacity: 0;
+}
+
+#accord01 {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.js-sticky {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  opacity: 0;
+  @include u-trs;
+  visibility: hidden;
+  background: rgba($color: #fff, $alpha: .9) !important;
+}
+
+.is-visible {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+}

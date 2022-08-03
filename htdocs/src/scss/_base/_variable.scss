@@ -1,0 +1,149 @@
+// color
+$white: #fff;
+$black: #2D2D2D;
+$grayBorder: #707070;
+$lightGray: #F7F7F7;
+$midGray: #EEEEEE;
+$darkGray: #212121;
+
+$activeRed: #fb3e1d;
+
+// my-colors
+$congressBlue: #004896;
+$palePrim: #F6FDC0;
+$rose: #DD007F;
+$lesterLemon: #F9FF58;
+$havelockBlue: #438CE0;
+$serenade: #FFF2E3;
+$charlotte:#95F7F3;
+$paleRose: #FFE3EF;
+$iceCold: #95F7DD;
+$tropicalBlue: #D0EBFA;
+
+$iceCold2: #98F5EE;
+$pictionBlue: #3EB9DE;
+$jonquil: #EFFD9E;
+
+// breakpoints
+$contentCenter: 1140px;
+$windowPC: 769px;
+$windowSP: 768px;
+$widthPrintPC: 1024px;
+
+// header height
+$headerHeightPC: 100px;
+$headerHeightSP: 50px;
+$footerHeightPC: 96px;
+$footerHeightSP: 50px;
+
+// wpAdminBar
+$wpAdminBarPC: 32px;
+$wpAdminBarSP: 46px;
+
+// text size
+$text50: 5rem;
+$text48: 4.8rem;
+$text45: 4.5rem;
+$text40: 4rem;
+$text38: 3.8rem;
+$text36: 3.6rem;
+$text34: 3.4rem;
+$text32: 3.2rem;
+$text30: 3rem;
+$text28: 2.8rem;
+$text24: 2.4rem;
+$text22: 2.2rem;
+$text20: 2rem;
+$text18: 1.8rem;
+$text16: 1.6rem;
+$text14: 1.4rem;
+$text12: 1.2rem;
+$text11: 1.1rem;
+
+@mixin commonTtlXl {
+  font-size: $text50;
+
+  @include u-mqMax {
+    font-size: $text34;
+
+    .sec02 & {
+      font-size: 6rem;
+    }
+  }
+}
+
+@mixin commonTtlLarge {
+  font-size: $text45;
+
+  @include u-mqMax {
+    font-size: $text30;
+  }
+}
+
+@mixin commonTtlMid {
+  font-size: $text38;
+}
+
+@mixin commonTtlNormal {
+  font-size: $text32;
+}
+
+@mixin commonLabelLarge {
+  font-size: $text38;
+}
+
+@mixin commonLabelMid {
+  font-size: $text28;
+}
+
+@mixin commonLabelNormal {
+  font-size: $text32;
+
+  @include u-mqMax {
+    font-size: $text22;
+
+    .sec02 & {
+      font-size: $text28;
+    }
+  }
+}
+
+@mixin commonLabelSm {
+  font-size: $text24;
+}
+
+@mixin commonLabelXs {
+  font-size: $text22;
+
+  @include u-mqMax {
+    font-size: $text18;
+  }
+}
+
+@mixin commonTextLarge {
+  font-size: $text20;
+
+  @include u-mqMax {
+    .secTtl & {
+      font-size: $text18;
+    }
+  }
+}
+
+@mixin commonTextMid {
+  font-size: $text18;
+
+  @include u-mqMax {
+    .sec01 & {
+      font-size: $text16;
+    }
+  }
+}
+
+@mixin commonTextNormal {
+  font-size: $text16;
+}
+
+@mixin commonTextSm {
+  font-size: $text14;
+}
